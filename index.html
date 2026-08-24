@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCT Game controller Tester</title>
+    <link rel="stylesheet" href="Ui/style.css">
+</head>
+
+<body>
+
+    <div class="shell">
+        <div class="left">
+            <div class="left_top"></div>
+            <div class="left_bottom">
+                <nav>
+                    <div class="nav_to_gui nav_active">
+                        <h3>Gui</h3>
+                    </div>
+                    <div class="nav_to_raw_data">
+                        <h3>RAW-Data</h3>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="right">
+            <div class="right_top">
+                <div class="right_top_left">
+                    <div id="export" class="Export">Export</div>
+                </div>
+                <div class="right_top_right">
+                    <div id="status" class="status disconnected ">Disconnected</div>
+                </div>
+            </div>
+
+            <div class="right_bottom">
+                <section id="gui">
+                    <div class="bottom_left">
+
+                        <div class="bottom_left_l1">
+                            <div class="l1_left">
+                                <div class="l1_left_top"></div>
+                                <div class="l1_left_bottom"></div>
+                            </div>
+
+                            <div class="l1_middle">
+                                <div class="l1_middle_box"></div>
+                                <div class="l1_middle_box"></div>
+                                <div class="l1_middle_box"></div>
+                                <div class="l1_middle_box"></div>
+                            </div>
+                            <div class="l1_right">
+                                <div class="l1_right_top"></div>
+                                <div class="l1_right_bottom"></div>
+
+                            </div>
+                        </div>
+                        <div class="bottom_left_l2">
+                            <div class="l2_left">
+                                <div class="l2_left_axis_ring">
+                                    <div class="l2_left_pointer_ring"></div>
+                                </div>
+                            </div>
+                            <div class="l2_right">
+                                <div class="l2_right_axis_ring">
+                                    <div class="l2_right_pointer_ring"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom_left_l3">
+                            <div class="l3_left">
+                                <div class="l3_left_top">
+                                    <div class="dpad_1 dpad"></div>
+                                </div>
+                                <div class="l3_left_middle">
+                                    <div class="dpad_2 dpad"></div>
+                                    <div class="dpad_3 dpad"></div>
+                                </div>
+                                <div class="l3_left_bottom">
+                                    <div class="dpad_4 dpad"></div>
+                                </div>
+                            </div>
+                            <div class="l3_right">
+                                <div class="l3_right_top">
+                                    <div class="ring1 ring"></div>
+                                </div>
+                                <div class="l3_right_middle">
+                                    <div class="ring2 ring"></div>
+                                    <div class="ring3 ring"></div>
+                                </div>
+                                <div class="l3_right_bottom">
+                                    <div class="ring4 ring"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom_left_l4">
+                            <div class="l4_Button_left l4_Button"></div>
+                            <div class="l4_Button_right l4_Button"></div>
+                        </div>
+                        <div class="bottom_left_l5">
+                            <button id="test_vibration">Vibrate</button>
+                        </div>
+
+                    </div>
+
+                    <div class="bottom_right">
+                        <div class="bottom_right_top">
+                            <canvas class="3d_gyro" id="gyro"></canvas>
+                            <!--Canvas will load via 3js-->
+                        </div>
+                        <div class="bottom_right_bottom">
+                            <div class="right_l1">
+                                <h1>Live Changing Values</h1>
+                            </div>
+                            <div class="right_l2">
+                                <!--inner html will load via js-->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section style="display: none;" id="raw-data">
+                    <!--This is raw Data section itis set to display none so it can work as SPA-->
+                    <!--I will amke this once GUi will be fully done-->
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="Logic/logic.js"></script>
+</body>
+
+</html>
