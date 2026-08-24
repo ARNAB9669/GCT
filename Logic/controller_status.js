@@ -14,7 +14,7 @@ export function updateStatus() {
     })
 
     // Check if a gamepad is already connected when the page loads
-    if (gamepads[0] || gamepads[1] || gamepads[2] || gamepads[3]) {
+    if (navigator.getGamepads()[0]) {
         el.innerText = "Connected"
         el.classList.remove("disconnected");
         el.classList.add("connected");
@@ -23,6 +23,7 @@ export function updateStatus() {
         el.classList.remove("connected");
         el.classList.add("disconnected");
     }   
+
 }
 
 

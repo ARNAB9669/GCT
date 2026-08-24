@@ -1,0 +1,394 @@
+
+/*/ Gui Section right bottom Design Starts /*/
+/*//*/
+/*/ Shell of gui section /*/
+.right_bottom {
+    width: 100%;
+    height: 88%;
+}
+
+#gui {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+
+}
+
+.bottom_left {
+    padding-top: 50px;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+.bottom_right {
+    width: 30%;
+    height: 100%;
+}
+
+/*/ Main design of GUi Left /*/
+
+/*/ Level-1 Disign Starts /*/
+.bottom_left_l1>* {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom_left_l1 {
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+}
+
+.l1_left>* {
+    width: 90%;
+    height: 40%;
+    border: 2px solid white;
+}
+
+.l1_middle>* {
+    aspect-ratio: 92/69;
+    width: 20%;
+    border: 2px solid white;
+}
+
+.l1_right>* {
+    width: 90%;
+    height: 40%;
+    border: 2px solid white;
+}
+
+.l1_left {
+    width: 25%;
+    height: 90%;
+    gap: 5px;
+}
+
+.l1_middle {
+    padding-left: 20px;
+    padding-right: 20px;
+    flex-direction: row;
+    gap: 10px;
+    width: 50%;
+    height: 90%;
+}
+
+.l1_right {
+    width: 25%;
+    height: 90%;
+    gap: 5px;
+}
+
+.l1_left_top {
+    border-radius: 30px 30px 0px 0px;
+}
+
+.l1_left_bottom {
+    border-radius: 0px 0px 30px 30px;
+}
+
+.l1_right_top {
+    border-radius: 30px 30px 0px 0px;
+}
+
+.l1_right_bottom {
+    border-radius: 0px 0px 30px 30px;
+}
+
+/*/ Level-1 Disign Ends /*/
+
+
+
+
+
+/*/ Level-2 Disign Starts /*/
+
+.bottom_left_l2 {
+    display: flex;
+    width: 100%;
+    height: 60%;
+    gap: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.bottom_left_l2>* {
+    height: 100%;
+    width: 50%;
+    border: 2px solid white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+/*/ Horizontal Line /*/
+.bottom_left_l2>*::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    transform: translateY(-50%);
+    /* Centers the 2px thickness perfectly */
+}
+
+/*/ Verticle Line /*/
+.bottom_left_l2>*::after {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background-color: white;
+    transform: translateX(-50%);
+    /* Centers the 2px thickness perfectly */
+}
+
+
+.bottom_left_l2>*>* {
+    width: 36%;
+    aspect-ratio: 1;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom_left_l2>*>*>* {
+    background-color: aqua;
+    width: 10%;
+    aspect-ratio: 1;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+/*/ Level-2 Disign Ends/*/
+
+
+/*/ Level-3 Disign Starts/*/
+
+/* --- MAIN CONTAINER --- */
+.bottom_left_l3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 40px;
+    background-color: #000;
+}
+
+
+.l3_left,
+.l3_right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+}
+
+
+.l3_left_middle,
+.l3_right_middle {
+    display: flex;
+    gap: 52px;
+    align-items: center;
+}
+
+/*/ D-PAD SHAPES /*/
+.dpad {
+    border: 2px solid #fff;
+    background-color: transparent;
+    box-sizing: border-box;
+}
+
+.dpad_1 {
+    /*/ UP /*/
+    width: 24px;
+    height: 40px;
+    border-radius: 12px 12px 0 0;
+}
+
+.dpad_2 {
+    /*/ LEFT /*/
+    width: 40px;
+    height: 24px;
+    border-radius: 12px 0 0 12px;
+    /* Rounds left only */
+}
+
+.dpad_3 {
+    /*/ RIGHT/ */
+    width: 40px;
+    height: 24px;
+    border-radius: 0 12px 12px 0;
+}
+
+.dpad_4 {
+    /*/ DOWN /*/
+    width: 24px;
+    height: 40px;
+    border-radius: 0 0 12px 12px;
+}
+
+/* --- ACTION BUTTONS (ABXY) --- */
+.ring {
+    width: 32px;
+    height: 32px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    flex-shrink: 0;
+    text-align: center;
+    line-height: 32px;
+    font-weight: bold;
+
+}
+
+/*/ Level-3 Disign Ends/*/
+
+
+
+/*/ Level-4 Disign Starts/*/
+.bottom_left_l4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.bottom_left_l4>* {
+    width: 25%;
+    height: 100%;
+    border: 2px solid white;
+}
+
+.l4_Button_left {
+    border-radius: 0px 30px 0px 30px;
+}
+
+.l4_Button_right {
+    border-radius: 30px 0px 30px 0px;
+}
+
+/*/ Level-4 Disign Ends/*/
+
+
+
+/*/ Level-5 Disign Starts/*/
+.bottom_left_l5 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#test_vibration {
+    background-color: #00fdd39a;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    width: 40%;
+    height: 100%;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    padding: 5px;
+    transition-duration: 0.3s;
+}
+
+#test_vibration:hover {
+    background-color: #00fdd3;
+    color: black;
+    cursor: pointer;
+}
+
+/*/ Level-5 Disign Ends/*/
+
+
+/*/ Main design of GUi Right /*/
+.bottom_right {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom_right>* {
+    width: 100%;
+    height: 50%;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+}
+
+.bottom_right_bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bottom_right_bottom>* {
+    width: 100%;
+    height: 10%;
+    display: flex;
+}
+
+.right_l1 {
+    height: 20%;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.right_l2 {
+    height: 80%;
+    /* background-color: rgb(104, 154, 108); */
+}
+
+.right_l1>h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    text-decoration: underline;
+}
+
+/*/ Gui Section right bottom Design ends /*/
+
+.Active{
+    background-color: aliceblue;
+    color: black;
+}
