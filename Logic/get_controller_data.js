@@ -4,11 +4,20 @@ export function getControllerData() {
 
     for (let i = 0; i < gamepads.length; i++) {
         const gamepad = gamepads[i];
-        if (gamepad) {
-            const buttons = gamepad.buttons.map(button => button.value);
-            const axes = gamepad.axes;
-            controllerData.push({ buttons, axes });
-        }
+
+        if (!gamepad) continue;
+
+        controllerData.push({
+            id: gamepad.id,
+
+            buttons: gamepad.buttons.map(button => ({
+                pressed: button.pressed,
+                touched: button.touched,
+                value: button.value
+            })),
+
+            axes: [...gamepad.axes]
+        });
     }
 
     return controllerData;
