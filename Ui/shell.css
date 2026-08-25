@@ -55,6 +55,8 @@ nav{
 }
 :is(.nav_to_gui, .nav_to_raw_data):hover {
     border: 2px solid #00FDD3;
+    cursor: pointer;
+    
 }
 .nav_active{
     background-color: #fff;

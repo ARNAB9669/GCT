@@ -392,3 +392,21 @@
     background-color: aliceblue;
     color: black;
 }
+
+
+.l2_left_axis_ring,
+.l2_right_axis_ring {
+    position: relative;
+}
+
+.l2_left_pointer_ring,
+.l2_right_pointer_ring {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+section[hidden] {
+    display: none !important;
+}
