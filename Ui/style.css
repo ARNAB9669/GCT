@@ -1,2 +1,15 @@
 @import url('./shell.css');
 @import url('./gui_section.css');
+
+.l2_left_axis_ring,
+.l2_right_axis_ring {
+    position: relative;
+}
+
+.l2_left_pointer_ring,
+.l2_right_pointer_ring {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
