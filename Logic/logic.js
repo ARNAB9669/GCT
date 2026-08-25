@@ -75,6 +75,9 @@ function updateGamepads() {
             if (el) el.classList.remove("Active");
         });
 
+        leftStick?.classList.remove("Active");
+        rightStick?.classList.remove("Active");
+
         requestAnimationFrame(updateGamepads);
         return;
     }
@@ -82,6 +85,10 @@ function updateGamepads() {
     const c = controllerData[0];
 
     updateStickPosition(c);
+
+    // Activate joystick visuals when their stick buttons are pressed
+    leftStick?.classList.toggle("Active", c.buttons[10]?.pressed ?? false);
+    rightStick?.classList.toggle("Active", c.buttons[11]?.pressed ?? false);
 
     // Update button highlights
     c.buttons.forEach((btn, index) => {
